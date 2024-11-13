@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Diagram</title>
+    <style>
+        .diagram-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .diagram-box {
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            width: 150px;
+            position: relative;
+        }
+        .diagram-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .arrow-down {
+            width: 2px;
+            height: 20px;
+            background-color: #6a5acd;
+            margin: 0 auto;
+        }
+        .arrow-text {
+            font-weight: bold;
+            color: #6a5acd;
+            margin: 5px 0;
+        }
+        .attribution {
+            font-size: 12px;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Architecture Diagram</h1>
+    <div class="diagram-container">
+        <!-- Shopify Frontend -->
+        <div class="diagram-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968919.png" alt="Shopify Frontend Icon" class="diagram-icon">
+            <div>Shopify Frontend</div>
+        </div>
+        <div class="arrow-down"></div>
+        <div class="arrow-text">Initiates Order / Checks Stock</div>
+        
+        <!-- Shopify Backend -->
+        <div class="diagram-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968919.png" alt="Shopify Backend Icon" class="diagram-icon">
+            <div>Shopify Backend</div>
+        </div>
+        <div class="arrow-down"></div>
+        <div class="arrow-text">Sends API Call</div>
+
+        <!-- Middleware Application -->
+        <div class="diagram-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/9750/9750216.png" alt="Middleware Icon" class="diagram-icon">
+            <div>Middleware Application</div>
+        </div>
+        <div class="arrow-down"></div>
+        <div class="arrow-text">Processes Requests</div>
+
+        <!-- Inventory & Order Status Check Module -->
+        <div class="diagram-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/10951/10951884.png" alt="Inventory Check Icon" class="diagram-icon">
+            <div>Inventory & Order Status Check Module</div>
+        </div>
+        <div class="arrow-down"></div>
+        <div class="arrow-text">Sends Requests, Receives Responses</div>
+
+        <!-- Amazon MCF API -->
+        <div class="diagram-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/9750/9750216.png" alt="Amazon MCF API Icon" class="diagram-icon">
+            <div>Amazon MFC API</div>
+        </div>
+        <div class="arrow-down"></div>
+        <div class="arrow-text">Processes Fulfillment and Updates</div>
+
+        <!-- Response Handling Module -->
+        <div class="diagram-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/17373/17373372.png" alt="Response Handling Icon" class="diagram-icon">
+            <div>Response Handling Module</div>
+        </div>
+        <div class="arrow-down"></div>
+        <div class="arrow-text">Updates Shopify</div>
+
+        <!-- Shopify Logo at the Bottom -->
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968919.png" alt="Shopify Logo" style="width: 100px; height: 100px;">
+        </div>
+    </div>
+
+    <div class="attribution">
+        Icons by <a href="https://www.flaticon.com" target="_blank">Flaticon</a>.
+    </div>
+</body>
+</html>
